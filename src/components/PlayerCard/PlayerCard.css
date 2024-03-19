@@ -1,0 +1,27 @@
+
+.playerCard {
+  width: 90%;
+  max-width: 800px; 
+  padding: 10px; 
+  margin: 30px;
+}
+
+.playerCardContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playerDetails {
+  padding: 1px;
+  margin-left: 30px; 
+  text-align: left; 
+}
+
+.symptomsList {
+  color:#ffffff90;
+  padding: 1px;
+  margin:0 3px;
+  text-transform: lowercase;
+  text-align: left;  
+}

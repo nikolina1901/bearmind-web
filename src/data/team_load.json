@@ -1,0 +1,147 @@
+[
+  {
+    "date": "01/29/2024",
+    "session_type": "training",
+    "player_load": 78.28293608442827
+  },
+  {
+    "date": "01/27/2024",
+    "session_type": "match",
+    "player_load": 90.43466476106843
+  },
+  {
+    "date": "01/26/2024",
+    "session_type": "match",
+    "player_load": 36.889248686038705
+  },
+  {
+    "date": "01/25/2024",
+    "session_type": "training",
+    "player_load": 77.28484400245961
+  },
+  {
+    "date": "01/23/2024",
+    "session_type": "match",
+    "player_load": 46.05634936192563
+  },
+  {
+    "date": "01/22/2024",
+    "session_type": "training",
+    "player_load": 58.48144467898582
+  },
+  {
+    "date": "01/20/2024",
+    "session_type": "match",
+    "player_load": 93.74216192467028
+  },
+  {
+    "date": "01/19/2024",
+    "session_type": "match",
+    "player_load": 58.441044471654756
+  },
+  {
+    "date": "01/18/2024",
+    "session_type": "training",
+    "player_load": 89.7219449032614
+  },
+  {
+    "date": "01/16/2024",
+    "session_type": "training",
+    "player_load": 93.0513351334948
+  },
+  {
+    "date": "01/15/2024",
+    "session_type": "training",
+    "player_load": 85.39569471526333
+  },
+  {
+    "date": "01/12/2024",
+    "session_type": "match",
+    "player_load": 88.49985387657645
+  },
+  {
+    "date": "01/05/2024",
+    "session_type": "training",
+    "player_load": 32.04337263019464
+  },
+  {
+    "date": "01/04/2024",
+    "session_type": "training",
+    "player_load": 76.06793171516676
+  },
+  {
+    "date": "12/23/2023",
+    "session_type": "match",
+    "player_load": 58.76278912344016
+  },
+  {
+    "date": "12/21/2023",
+    "session_type": "match",
+    "player_load": 23.74388940779045
+  },
+  {
+    "date": "12/20/2023",
+    "session_type": "training",
+    "player_load": 18.200616115769893
+  },
+  {
+    "date": "12/19/2023",
+    "session_type": "match",
+    "player_load": 28.973808749622908
+  },
+  {
+    "date": "12/18/2023",
+    "session_type": "training",
+    "player_load": 63.99120942757204
+  },
+  {
+    "date": "12/17/2023",
+    "session_type": "training",
+    "player_load": 90.29143202132393
+  },
+  {
+    "date": "12/15/2023",
+    "session_type": "training",
+    "player_load": 83.35245163257255
+  },
+  {
+    "date": "12/13/2023",
+    "session_type": "training",
+    "player_load": 81.47439747935096
+  },
+  {
+    "date": "12/09/2023",
+    "session_type": "match",
+    "player_load": 51.11207822630913
+  },
+  {
+    "date": "12/08/2023",
+    "session_type": "match",
+    "player_load": 21.07020269224081
+  },
+  {
+    "date": "12/07/2023",
+    "session_type": "training",
+    "player_load": 43.984461804744356
+  },
+  {
+    "date": "12/06/2023",
+    "session_type": "training",
+    "player_load": 61.105526082026564
+  },
+  {
+    "date": "12/05/2023",
+    "session_type": "training",
+    "player_load": 88.39775268578755
+  },
+  {
+    "date": "12/02/2023",
+    "session_type": "match",
+    "player_load": 89.46103848185767
+  },
+  {
+    "date": "12/01/2023",
+    "session_type": "match",
+    "player_load": 89.43198984100748
+  }
+]

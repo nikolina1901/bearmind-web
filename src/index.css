@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.rdrDefinedRangesWrapper {
+ display: none !important;
+}
+.rdrCalendarWrapper {
+    background: #ffffff00  !important;}
+
+.rdrDateDisplayWrapper {
+    background-color: #ffffff00
+!important;}
+
+.rdrDateDisplayItem {
+    border-radius: 4px;
+    background-color: #ffffff00 !important;
+    border: 1px solid  #3d91ff66 !important;
+  }
+
+  .rdrMonthAndYearPickers select {
+    color: #fff !important;}
+
+    .rdrNextPrevButton {
+    background: #ffffff00!important;}
+
+    .rdrDayNumber span {
+    color: #fff !important;}

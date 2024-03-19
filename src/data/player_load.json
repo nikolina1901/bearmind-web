@@ -1,0 +1,112 @@
+[
+  {
+    "date": "01/29/2024",
+    "session_type": "training",
+    "player_load": 3.9096430700385696
+  },
+  {
+    "date": "01/27/2024",
+    "session_type": "match",
+    "player_load": 52.87650937658114
+  },
+  {
+    "date": "01/26/2024",
+    "session_type": "match",
+    "player_load": 74.68750045699038
+  },
+  {
+    "date": "01/25/2024",
+    "session_type": "training",
+    "player_load": 39.796440521046826
+  },
+  {
+    "date": "01/23/2024",
+    "session_type": "match",
+    "player_load": 92.36459481665115
+  },
+  {
+    "date": "01/19/2024",
+    "session_type": "match",
+    "player_load": 82.25090090121665
+  },
+  {
+    "date": "01/16/2024",
+    "session_type": "training",
+    "player_load": 60.06791806245169
+  },
+  {
+    "date": "01/15/2024",
+    "session_type": "training",
+    "player_load": 48.50901181019978
+  },
+  {
+    "date": "01/12/2024",
+    "session_type": "match",
+    "player_load": 87.15928683535795
+  },
+  {
+    "date": "01/05/2024",
+    "session_type": "training",
+    "player_load": 16.612751858582698
+  },
+  {
+    "date": "01/04/2024",
+    "session_type": "training",
+    "player_load": 49.291622796252
+  },
+  {
+    "date": "12/23/2023",
+    "session_type": "match",
+    "player_load": 84.51081413598789
+  },
+  {
+    "date": "12/21/2023",
+    "session_type": "match",
+    "player_load": 79.89059430218008
+  },
+  {
+    "date": "12/19/2023",
+    "session_type": "match",
+    "player_load": 80.34217871791827
+  },
+  {
+    "date": "12/18/2023",
+    "session_type": "training",
+    "player_load": 38.27345062658506
+  },
+  {
+    "date": "12/17/2023",
+    "session_type": "training",
+    "player_load": 70.88397294878231
+  },
+  {
+    "date": "12/15/2023",
+    "session_type": "training",
+    "player_load": 77.22796070908072
+  },
+  {
+    "date": "12/13/2023",
+    "session_type": "training",
+    "player_load": 70.09012545206758
+  },
+  {
+    "date": "12/08/2023",
+    "session_type": "match",
+    "player_load": 92.56188325804706
+  },
+  {
+    "date": "12/07/2023",
+    "session_type": "training",
+    "player_load": 35.77325243234445
+  },
+  {
+    "date": "12/02/2023",
+    "session_type": "match",
+    "player_load": 87.68273543641004
+  },
+  {
+    "date": "12/01/2023",
+    "session_type": "match",
+    "player_load": 86.33850216918964
+  }
+]

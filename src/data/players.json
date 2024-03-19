@@ -1,0 +1,198 @@
+[
+  {
+    "id": "0",
+    "firstName": "Adrian",
+    "lastName": "Mitchell",
+    "photoPath": "https://www.nationalleague.ch/api/player/108497/image",
+    "player": {
+      "status": "IN_RECOVERY",
+      "lastEvent": {
+        "symptoms": [
+          "ARMS_WEAKNESS",
+          "ARMS_WEAKNESS",
+          "ARMS_WEAKNESS",
+          "ARMS_WEAKNESS"
+        ],
+        "createdAt": "2023-12-10T19:39:33.133Z"
+      }
+    },
+    "jerseyNumber": 9,
+    "position": "CENTER"
+  },
+  {
+    "id": "1",
+    "firstName": "Ethan",
+    "lastName": "Sullivan",
+    "photoPath": null,
+    "player": {
+      "id": "45085db3-1a06-40bf-9bc1-1757a461666d",
+      "status": "ACTIVE",
+      "lastEvent": {}
+    },
+    "jerseyNumber": 1,
+    "position": "CENTER"
+  },
+  {
+    "id": "2",
+    "firstName": "Garrett",
+    "lastName": "Flynn",
+    "photoPath": "https://www.nationalleague.ch/api/player/159242/image",
+    "player": {
+      "status": null,
+      "lastEvent": {}
+    },
+    "jerseyNumber": 15,
+    "position": "CENTER"
+  },
+  {
+    "id": "3",
+    "firstName": "Caleb",
+    "lastName": "Harrison",
+    "photoPath": null,
+    "player": {
+      "status": null,
+      "lastEvent": {}
+    },
+    "jerseyNumber": 50,
+    "position": "GOALIE"
+  },
+  {
+    "id": "4",
+    "firstName": "Mason",
+    "lastName": "Hayes",
+    "photoPath": null,
+    "player": {
+      "status": null,
+      "lastEvent": {}
+    },
+    "jerseyNumber": 33,
+    "position": "RIGHT_DEFENSEMAN"
+  },
+  {
+    "id": "5",
+    "firstName": "Dominic",
+    "lastName": "West",
+    "photoPath": null,
+    "player": {
+      "status": null,
+      "lastEvent": {}
+    },
+    "jerseyNumber": 23,
+    "position": "CENTER"
+  },
+  {
+    "id": "6",
+    "firstName": "Xavier",
+    "lastName": "Brooks",
+    "photoPath": null,
+    "player": {
+      "status": "IN_RECOVERY",
+      "lastEvent": {
+        "symptoms": [
+          "ARMS_WEAKNESS"
+        ],
+        "createdAt": "2024-01-26T12:17:38.768Z"
+      }
+    },
+    "jerseyNumber": 14,
+    "position": "CENTER"
+  }
+,{
+    "id": "0",
+    "firstName": "Adrian",
+    "lastName": "Mitchell",
+    "photoPath": "https://www.nationalleague.ch/api/player/108497/image",
+    "player": {
+      "status": "IN_RECOVERY",
+      "lastEvent": {
+        "symptoms": [
+          "ARMS_WEAKNESS",
+          "ARMS_WEAKNESS",
+          "ARMS_WEAKNESS",
+          "ARMS_WEAKNESS"
+        ],
+        "createdAt": "2023-12-10T19:39:33.133Z"
+      }
+    },
+    "jerseyNumber": 9,
+    "position": "CENTER"
+  },
+  {
+    "id": "1",
+    "firstName": "Ethan",
+    "lastName": "Sullivan",
+    "photoPath": null,
+    "player": {
+      "id": "45085db3-1a06-40bf-9bc1-1757a461666d",
+      "status": "ACTIVE",
+      "lastEvent": {}
+    },
+    "jerseyNumber": 1,
+    "position": "CENTER"
+  },
+  {
+    "id": "2",
+    "firstName": "Garrett",
+    "lastName": "Flynn",
+    "photoPath": "https://www.nationalleague.ch/api/player/159242/image",
+    "player": {
+      "status": null,
+      "lastEvent": {}
+    },
+    "jerseyNumber": 15,
+    "position": "CENTER"
+  },
+  {
+    "id": "3",
+    "firstName": "Caleb",
+    "lastName": "Harrison",
+    "photoPath": null,
+    "player": {
+      "status": null,
+      "lastEvent": {}
+    },
+    "jerseyNumber": 50,
+    "position": "GOALIE"
+  },
+  {
+    "id": "4",
+    "firstName": "Mason",
+    "lastName": "Hayes",
+    "photoPath": null,
+    "player": {
+      "status": null,
+      "lastEvent": {}
+    },
+    "jerseyNumber": 33,
+    "position": "RIGHT_DEFENSEMAN"
+  },
+  {
+    "id": "5",
+    "firstName": "Dominic",
+    "lastName": "West",
+    "photoPath": null,
+    "player": {
+      "status": null,
+      "lastEvent": {}
+    },
+    "jerseyNumber": 23,
+    "position": "CENTER"
+  },
+  {
+    "id": "6",
+    "firstName": "Xavier",
+    "lastName": "Brooks",
+    "photoPath": null,
+    "player": {
+      "status": "IN_RECOVERY",
+      "lastEvent": {
+        "symptoms": [
+          "ARMS_WEAKNESS"
+        ],
+        "createdAt": "2024-01-26T12:17:38.768Z"
+      }
+    },
+    "jerseyNumber": 14,
+    "position": "CENTER"
+  }
+]

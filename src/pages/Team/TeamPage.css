@@ -1,0 +1,27 @@
+.teamPageWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; 
+    
+}
+
+@media screen and (max-width: 1300px) {
+    .teamPageWrap {
+        flex-direction: column; 
+        align-items: center; 
+        max-height: none; 
+        overflow-y: initial; 
+    }
+}
+
+.playerCardWrapper {
+    width: 45%; 
+}
+
+/* Set width to 100% for smaller screens to occupy full width */
+@media screen and (max-width: 1300px) {
+    .playerCardWrapper {
+        width: 100%; 
+    }
+}
