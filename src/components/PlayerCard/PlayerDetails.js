@@ -26,7 +26,15 @@ export const PlayerDetails = ({
 
   return (
     <div className={contentWrapper}>
-      <Avatar src={photo} sx={{ width: 100, height: 100, backgroundColor: !photo ? colors.mainBackground : colors.transparent, }} variant="square">
+      <Avatar
+        src={photo}
+        sx={{
+          width: 100,
+          height: 100,
+          backgroundColor: !photo ? colors.mainBackground : colors.transparent,
+        }}
+        variant="square"
+      >
         {photo ? undefined : number}
       </Avatar>
       <div className={detailsWrapper}>
@@ -43,8 +51,8 @@ export const PlayerDetails = ({
           sx={{ fontWeight: "bold" }}
         >
           {position && number
-            ? `${number} ${position}`
-            : position || number || null}
+            ? `${number} ${formatStrData(position)}`
+            : formatStrData(position) || number || null}
         </Typography>
         {status && renderStatus(formatStrData(status))}
       </div>

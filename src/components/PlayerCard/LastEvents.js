@@ -5,7 +5,11 @@ import colors from "../../style/colors";
 
 const LastEvents = ({ title, listTitle, list, listWrapper }) => {
   const renderTypography = (text) => (
-    <Typography variant="body1" color={colors.white} sx={{ fontWeight: "bold" }}>
+    <Typography
+      variant="body1"
+      color={colors.white}
+      sx={{ fontWeight: "bold" }}
+    >
       {text}
     </Typography>
   );
@@ -14,7 +18,7 @@ const LastEvents = ({ title, listTitle, list, listWrapper }) => {
     <Card
       sx={{
         backgroundColor: colors.whiteOpacity,
-        width: "300px",
+        width: "450px",
       }}
     >
       <CardHeader
