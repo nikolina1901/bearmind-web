@@ -2,10 +2,16 @@ import React, { useState, useEffect } from "react";
 import { DateRangePicker } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
-import { Button, Radio, RadioGroup, FormControlLabel } from "@mui/material";
+import { Button } from "@mui/material";
 import "./CustomDateRangePicker.scss";
 import colors from "../../style/colors";
-
+import CustomRadioGroup from "../CustomRadioGroup";
+const options = [
+  { value: "none", label: "All" },
+  { value: "week", label: "This Week" },
+  { value: "month", label: "This Month" },
+  { value: "year", label: "This Year" },
+];
 const CustomDateRangePicker = ({ data, onDataFilter, setDateRange }) => {
   const [dateRange, setDateRangeState] = useState({
     startDate: new Date(),
@@ -107,35 +113,13 @@ const CustomDateRangePicker = ({ data, onDataFilter, setDateRange }) => {
 
   return (
     <div>
-      <RadioGroup
-        aria-label="filter"
+      <CustomRadioGroup
+        ariaLabel="filter"
         name="filter"
         value={filter}
-        sx={{ color: colors.white, flexWrap: "wrap", alignItems: "center" }}
         onChange={handleFilterChange}
-        row
-      >
-        <FormControlLabel
-          value="none"
-          control={<Radio style={{ color: colors.white }} />}
-          label="All"
-        />
-        <FormControlLabel
-          value="week"
-          control={<Radio style={{ color: colors.white }} />}
-          label="This Week"
-        />
-        <FormControlLabel
-          value="month"
-          control={<Radio style={{ color: colors.white }} />}
-          label="This Month"
-        />
-        <FormControlLabel
-          value="year"
-          control={<Radio style={{ color: colors.white }} />}
-          label="This Year"
-        />
-      </RadioGroup>
+        options={options}
+      />
       <Button
         onClick={() => setIsDateRangePickerActive(!isDateRangePickerActive)}
       >

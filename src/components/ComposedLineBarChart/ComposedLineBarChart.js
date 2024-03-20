@@ -40,7 +40,14 @@ const ComposedLineBarChart = ({
               axisLine={{ stroke: colors.whiteOpacity }}
               tick={{ fill: colors.white }}
             />
-            <Tooltip content={<CustomTooltip />} />
+            <Tooltip
+              content={
+                <CustomTooltip
+                  className1="custom-tooltip"
+                  className2="tooltip-player"
+                />
+              }
+            />
             <Bar
               dataKey="team"
               barSize={20}
