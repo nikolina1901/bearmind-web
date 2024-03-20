@@ -1,8 +1,9 @@
 import React from "react";
 import { Card, CardContent } from "@mui/material";
-import "./PlayerCard.css";
+import "./PlayerCard.scss";
 import LastEvents from "./LastEvents";
 import { PlayerDetails } from "./PlayerDetails";
+import colors from "../../style/colors";
 
 const PlayerCard = ({
   photo,
@@ -16,7 +17,7 @@ const PlayerCard = ({
   return (
     <Card
       className="playerCard"
-      sx={{ backgroundColor: "#ffffff10", borderRadius: 4 }}
+      sx={{ backgroundColor: colors.whiteOpacity, borderRadius: 4 }}
     >
       <CardContent className="playerCardContent">
         <PlayerDetails

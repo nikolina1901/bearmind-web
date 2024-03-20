@@ -1,6 +1,7 @@
+@import '../../style/colors.scss';
 
 .playerCard {
-  width: 90%;
+  width: 94%;
   max-width: 1200px;
   padding: 10px;
   margin: 30px auto;
@@ -19,7 +20,7 @@
 }
 
 .symptomsList {
-  color:#ffffff90;
+  color:$white;
   padding: 1px;
   margin:0 3px;
   text-transform: lowercase;

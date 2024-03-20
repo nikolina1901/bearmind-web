@@ -1,6 +1,7 @@
 import React from "react";
 import { FormControlLabel, FormGroup } from "@mui/material";
 import CustomSwitch from "./CustomSwitch";
+import colors from "../../style/colors";
 
 const SeasonSwitches = ({ switches, activeSessionType, onDataFilter }) => (
   <FormGroup row>
@@ -14,7 +15,7 @@ const SeasonSwitches = ({ switches, activeSessionType, onDataFilter }) => (
           />
         }
         label={label}
-        sx={{ color: "#fff" }}
+        sx={{ color: colors.white }}
       />
     ))}
   </FormGroup>

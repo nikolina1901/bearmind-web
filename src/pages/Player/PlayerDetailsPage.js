@@ -3,12 +3,13 @@ import { Link, useParams } from "react-router-dom";
 import { Typography, Tooltip } from "@mui/material";
 import Groups2Icon from "@mui/icons-material/Groups2";
 import { mergePlayerAndTeamData } from "../../helper";
-import "./PlayerDetailsPage.css";
+import "./PlayerDetailsPage.scss";
 import playerData from "../../data/player_load.json";
 import teamData from "../../data/team_load.json";
 import players from "../../data/players.json";
 import PlayerCard from "../../components/PlayerCard/PlayerCard";
 import ComposedLineBarChart from "../../components/ComposedLineBarChart/ComposedLineBarChart";
+import colors from "../../style/colors";
 
 const PlayerDetailsPage = () => {
   const { id } = useParams();
@@ -77,12 +78,16 @@ const PlayerDetailsPage = () => {
     <>
       <header className="header">
         <div className="player-info">
-          <Typography variant="h5" color="white" sx={{ fontWeight: "bold" }}>
+          <Typography
+            variant="h5"
+            color={colors.white}
+            sx={{ fontWeight: "bold" }}
+          >
             {`${player.firstName} ${player.lastName}`}
           </Typography>
           <Tooltip title="Team page" placement="left">
             <Link to="/" className="go-back-button">
-              <Groups2Icon fontSize="large" style={{ color: "#fff" }} />
+              <Groups2Icon fontSize="large" style={{ color: colors.white }} />
             </Link>
           </Tooltip>
         </div>

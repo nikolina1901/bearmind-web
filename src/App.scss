@@ -1,8 +1,9 @@
+@import './style/colors.scss';
 .App {
   text-align: center;
   width: 100vw;
   height: 100vh;
-  background-color: #050f20;
+  background-color: $main-background;
   max-height:100vh; 
   overflow-y: auto; 
 }

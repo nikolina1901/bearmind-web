@@ -1,10 +1,11 @@
 import React from "react";
 import { Card, CardContent, CardHeader, Typography } from "@mui/material";
 import { formatStrData } from "../../helper";
+import colors from "../../style/colors";
 
 const LastEvents = ({ title, listTitle, list, listWrapper }) => {
   const renderTypography = (text) => (
-    <Typography variant="body1" color="#FFF" sx={{ fontWeight: "bold" }}>
+    <Typography variant="body1" color={colors.white} sx={{ fontWeight: "bold" }}>
       {text}
     </Typography>
   );
@@ -12,13 +13,13 @@ const LastEvents = ({ title, listTitle, list, listWrapper }) => {
   return (
     <Card
       sx={{
-        backgroundColor: "#ffffff10",
+        backgroundColor: colors.whiteOpacity,
         width: "300px",
       }}
     >
       <CardHeader
         sx={{
-          backgroundColor: "#ffffff10",
+          backgroundColor: colors.whiteOpacity,
           padding: 0,
           pl: 1,
           textAlign: "left",

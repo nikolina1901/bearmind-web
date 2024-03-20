@@ -1,6 +1,6 @@
-import "./App.css";
+import "./App.scss";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Routes } from "react-router-dom";
+import { Routes } from "react-router-dom"
 import TeamPage from "./pages/Team/TeamPage";
 import PlayerDetailsPage from "./pages/Player/PlayerDetailsPage";
 

@@ -1,6 +1,6 @@
-// CustomSwitch.js
 import React from "react";
 import { Switch } from "@mui/material";
+import colors from "../../style/colors";
 
 const CustomSwitch = ({ checked, onChange }) => (
   <Switch
@@ -8,10 +8,10 @@ const CustomSwitch = ({ checked, onChange }) => (
     onChange={onChange}
     sx={{
       "& .MuiSwitch-thumb": {
-        backgroundColor: "#fff",
+        backgroundColor: colors.white,
       },
       "& .MuiSwitch-track": {
-        backgroundColor: "rgba(255, 255, 255, 0.5)",
+        backgroundColor: colors.whiteOpacity,
       },
     }}
   />

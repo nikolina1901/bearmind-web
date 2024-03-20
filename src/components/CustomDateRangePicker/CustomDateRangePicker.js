@@ -3,7 +3,8 @@ import { DateRangePicker } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { Button, Radio, RadioGroup, FormControlLabel } from "@mui/material";
-import "./CustomDateRangePicker.css";
+import "./CustomDateRangePicker.scss";
+import colors from "../../style/colors";
 
 const CustomDateRangePicker = ({ data, onDataFilter, setDateRange }) => {
   const [dateRange, setDateRangeState] = useState({
@@ -110,28 +111,28 @@ const CustomDateRangePicker = ({ data, onDataFilter, setDateRange }) => {
         aria-label="filter"
         name="filter"
         value={filter}
-        style={{ color: "white" }}
+        sx={{ color: colors.white, flexWrap: "wrap", alignItems: "center" }}
         onChange={handleFilterChange}
         row
       >
         <FormControlLabel
           value="none"
-          control={<Radio style={{ color: "white" }} />}
+          control={<Radio style={{ color: colors.white }} />}
           label="All"
         />
         <FormControlLabel
           value="week"
-          control={<Radio style={{ color: "white" }} />}
+          control={<Radio style={{ color: colors.white }} />}
           label="This Week"
         />
         <FormControlLabel
           value="month"
-          control={<Radio style={{ color: "white" }} />}
+          control={<Radio style={{ color: colors.white }} />}
           label="This Month"
         />
         <FormControlLabel
           value="year"
-          control={<Radio style={{ color: "white" }} />}
+          control={<Radio style={{ color: colors.white }} />}
           label="This Year"
         />
       </RadioGroup>

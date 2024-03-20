@@ -1,0 +1,32 @@
+@import '../../style/colors.scss';
+
+.rdrDefinedRangesWrapper {
+ display: none !important;
+}
+.rdrCalendarWrapper {
+    background: $transparent  !important;}
+
+.rdrDateDisplayWrapper {
+    background-color: $transparent
+!important;}
+
+.rdrDateDisplayItem {
+    border-radius: 4px;
+    background-color: $transparent !important;
+    border: 1px solid  $calendar !important;
+  }
+
+  .rdrMonthAndYearPickers select {
+    color: $white !important;}
+
+    .rdrNextPrevButton {
+    background: $transparent !important;}
+
+    .rdrDayNumber span {
+    color: $white !important;
+    font-weight: bold !important;
+}
+
+    .rdrSelected, .rdrInRange, .rdrStartEdge, .rdrEndEdge {
+    background: $calendar !important;
+}

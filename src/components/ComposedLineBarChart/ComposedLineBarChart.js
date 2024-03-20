@@ -1,26 +1,12 @@
 import React from "react";
 import { ComposedChart, Line, Bar, XAxis, Tooltip } from "recharts";
 import { Box } from "@mui/material";
-
-import "./ComposedLineBarChart.css";
+import "./ComposedLineBarChart.scss";
+import colors from "../../style/colors";
 
 import CustomDateRangePicker from "../CustomDateRangePicker/CustomDateRangePicker";
 import SeasonFiltering from "../SeasonFiltering/SeasonFiltering";
-
-const CustomTooltip = ({ active, payload }) => {
-  if (active && payload && payload.length) {
-    const { date, player, team } = payload[0].payload;
-    return (
-      <div className="custom-tooltip">
-        <p>{`Date: ${date}`}</p>
-        <p className="tooltip-player">{`Player Load: ${player?.toFixed(2)}`}</p>
-        <p className="tooltip-team">{`Team Load: ${team.toFixed(2)}`}</p>
-      </div>
-    );
-  }
-
-  return null;
-};
+import CustomTooltip from "./CustomTooltip";
 
 const ComposedLineBarChart = ({
   handleDataFilterByDate,
@@ -31,7 +17,7 @@ const ComposedLineBarChart = ({
   setDateRange,
 }) => {
   return (
-    <Box className="chart-wrapper" sx={{ background: "#ffffff10" }}>
+    <Box className="chart-wrapper" sx={{ background: colors.whiteOpacity }}>
       <SeasonFiltering
         activeSessionType={activeSessionType}
         onDataFilter={filterDataBySessionType}
@@ -41,33 +27,30 @@ const ComposedLineBarChart = ({
         onDataFilter={handleDataFilterByDate}
         setDateRange={setDateRange}
       />
-      <Box className="chart">
+      <Box className="chart" sx={{ background: colors.chartBackground }}>
         <Box sx={{ width: "100%" }}>
           <ComposedChart
             width={filteredData.length * 100}
-            height={300}
+            height={400}
             data={filteredData}
             margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
           >
             <XAxis
               dataKey="date"
-              axisLine={{ stroke: "#ffffff00" }}
-              tick={{ fill: "#fff" }}
+              axisLine={{ stroke: colors.whiteOpacity }}
+              tick={{ fill: colors.white }}
             />
-            <Tooltip
-              content={<CustomTooltip />}
-              wrapperStyle={{ background: "#050f20" }}
-            />
+            <Tooltip content={<CustomTooltip />} />
             <Bar
               dataKey="team"
               barSize={20}
-              fill="#ffffff10"
-              shape={(props) => <rect rx={5} ry={5} {...props} />}
+              fill={colors.teamData}
+              shape={(props) => <rect rx={3} ry={3} {...props} />}
             />
             <Line
               type="monotone"
               dataKey="player"
-              stroke="red"
+              stroke={colors.playerData}
               strokeWidth={3}
             />
           </ComposedChart>

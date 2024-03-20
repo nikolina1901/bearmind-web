@@ -1,3 +1,4 @@
+@import './style/colors.scss';
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -24,7 +25,6 @@ code {
 }
 
 .scrollable-container::-webkit-scrollbar-thumb {
-
-  background-color: #ffffff18; 
+  background-color: $white-opacity; 
   border-radius: 5px;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./TeamPage.css";
+import "./TeamPage.scss";
 import { Link } from "react-router-dom";
 import players from "../../data/players.json";
 import PlayerCard from "../../components/PlayerCard/PlayerCard";
