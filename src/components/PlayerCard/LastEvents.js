@@ -4,7 +4,7 @@ import { formatStrData } from "../../helper";
 
 const LastEvents = ({ title, listTitle, list, listWrapper }) => {
   const renderTypography = (text) => (
-    <Typography variant="body1" color="primary" sx={{ fontWeight: "bold" }}>
+    <Typography variant="body1" color="#FFF" sx={{ fontWeight: "bold" }}>
       {text}
     </Typography>
   );
@@ -13,8 +13,7 @@ const LastEvents = ({ title, listTitle, list, listWrapper }) => {
     <Card
       sx={{
         backgroundColor: "#ffffff10",
-        width: "250px",
-        overflowY: "auto",
+        width: "300px",
       }}
     >
       <CardHeader
@@ -32,7 +31,10 @@ const LastEvents = ({ title, listTitle, list, listWrapper }) => {
         }
       />
       {list && (
-        <CardContent sx={{ maxHeight: "20px", overflowY: "auto" }}>
+        <CardContent
+          className="scrollable-container"
+          sx={{ maxHeight: "50px", overflowY: "auto", pt: 0.5 }}
+        >
           {list.map((item, index) => (
             <ul key={index} className={listWrapper}>
               <li>{formatStrData(item)}</li>

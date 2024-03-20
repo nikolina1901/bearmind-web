@@ -1,26 +1,20 @@
-import { Box } from "@mui/material";
 import React from "react";
 import { ComposedChart, Line, Bar, XAxis, Tooltip } from "recharts";
+import { Box } from "@mui/material";
+
+import "./ComposedLineBarChart.css";
+
 import CustomDateRangePicker from "../CustomDateRangePicker/CustomDateRangePicker";
 import SeasonFiltering from "../SeasonFiltering/SeasonFiltering";
-
 
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     const { date, player, team } = payload[0].payload;
     return (
-      <div
-        className="custom-tooltip"
-        style={{
-          width: "auto",
-          height: "auto",
-          fontSize: "18px",
-          padding: "0 20px",
-        }}
-      >
-        <p style={{ color: "#fff" }}>{`Date: ${date}`}</p>
-        <p style={{ color: "red" }}>{`Player Load: ${player?.toFixed(2)}`}</p>
-        <p style={{ color: "#565c67" }}>{`Team Load: ${team.toFixed(2)}`}</p>
+      <div className="custom-tooltip">
+        <p>{`Date: ${date}`}</p>
+        <p className="tooltip-player">{`Player Load: ${player?.toFixed(2)}`}</p>
+        <p className="tooltip-team">{`Team Load: ${team.toFixed(2)}`}</p>
       </div>
     );
   }
@@ -34,33 +28,20 @@ const ComposedLineBarChart = ({
   filteredData,
   activeSessionType,
   filterDataBySessionType,
+  setDateRange,
 }) => {
   return (
-    <Box
-      sx={{
-        width: "90%",
-        margin: "0 auto",
-        background: "#ffffff10",
-        borderRadius: "10px",
-      }}
-    >
+    <Box className="chart-wrapper" sx={{ background: "#ffffff10" }}>
+      <SeasonFiltering
+        activeSessionType={activeSessionType}
+        onDataFilter={filterDataBySessionType}
+      />
       <CustomDateRangePicker
         data={data}
         onDataFilter={handleDataFilterByDate}
+        setDateRange={setDateRange}
       />
-      <SeasonFiltering
-        activeSessionType={activeSessionType}
-        filterDataBySessionType={filterDataBySessionType}
-      />
-      <Box
-        sx={{
-          width: "95%",
-          overflowX: "auto",
-          margin: "0 auto",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
+      <Box className="chart">
         <Box sx={{ width: "100%" }}>
           <ComposedChart
             width={filteredData.length * 100}

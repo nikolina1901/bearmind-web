@@ -1,0 +1,33 @@
+.chart-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow-x: auto;
+  display: flex;
+}
+
+.custom-tooltip {
+  white-space: nowrap;
+  font-size: 18px;
+  padding: 10px;
+  color: #fff;
+  background-color: #050f20;
+  border-radius: 5px;
+}
+
+.tooltip-player {
+  color: #ff0000;
+}
+
+.tooltip-team {
+  color: #565c67;
+}

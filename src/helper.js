@@ -36,10 +36,14 @@ export const mergePlayerAndTeamData = (playerData, teamData) => {
     // Convert mergedDataByDate object to array
     const mergedData = Object.values(mergedDataByDate);
 
-    // Reverse the mergedData array
-    const reversedMergedData = mergedData.reverse();
+    // Sort the merged data array by date
+    mergedData.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateA - dateB;
+    });
 
-    return reversedMergedData;
+    return mergedData;
   } catch (error) {
     console.error("Error merging player and team data:", error);
     return null;

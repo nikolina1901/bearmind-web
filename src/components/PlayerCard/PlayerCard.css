@@ -1,9 +1,9 @@
 
 .playerCard {
   width: 90%;
-  max-width: 800px; 
-  padding: 10px; 
-  margin: 30px;
+  max-width: 1200px;
+  padding: 10px;
+  margin: 30px auto;
 }
 
 .playerCardContent {

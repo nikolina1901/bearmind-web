@@ -2,14 +2,33 @@ import React, { useState, useEffect } from "react";
 import { DateRangePicker } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
+import { Button, Radio, RadioGroup, FormControlLabel } from "@mui/material";
+import "./CustomDateRangePicker.css";
 
-const CustomDateRangePicker = ({ data, onDataFilter }) => {
-  const [dateRange, setDateRange] = useState({
+const CustomDateRangePicker = ({ data, onDataFilter, setDateRange }) => {
+  const [dateRange, setDateRangeState] = useState({
     startDate: new Date(),
     endDate: new Date(),
     key: "selection",
   });
   const [isDateRangePickerActive, setIsDateRangePickerActive] = useState(false);
+  const [filter, setFilter] = useState("none");
+
+  useEffect(() => {
+    const oldestDate = new Date(
+      Math.min(...data.map((item) => new Date(item.date)))
+    );
+    const currentDate = new Date();
+
+    setDateRangeState({
+      startDate: oldestDate,
+      endDate: currentDate,
+      key: "selection",
+    });
+
+    filterDataByDateRange();
+    setFilter("none");
+  }, [data]);
 
   useEffect(() => {
     filterDataByDateRange();
@@ -31,6 +50,11 @@ const CustomDateRangePicker = ({ data, onDataFilter }) => {
   };
 
   const handleDateChange = (ranges) => {
+    setDateRangeState({
+      startDate: ranges.selection.startDate,
+      endDate: ranges.selection.endDate,
+      key: "selection",
+    });
     setDateRange({
       startDate: ranges.selection.startDate,
       endDate: ranges.selection.endDate,
@@ -38,11 +62,12 @@ const CustomDateRangePicker = ({ data, onDataFilter }) => {
     });
   };
 
-  const handleFilterChange = (filter) => {
+  const handleFilterChange = (event) => {
+    const value = event.target.value;
     let startDate, endDate;
 
     const today = new Date();
-    switch (filter) {
+    switch (value) {
       case "week":
         startDate = new Date(today);
         startDate.setDate(today.getDate() - today.getDay());
@@ -58,38 +83,74 @@ const CustomDateRangePicker = ({ data, onDataFilter }) => {
         endDate = new Date(today.getFullYear(), 11, 31);
         break;
       default:
-        startDate = new Date();
-        endDate = new Date();
+        const oldestDate = new Date(
+          Math.min(...data.map((item) => new Date(item.date)))
+        );
+        startDate = oldestDate;
+        endDate = today;
     }
 
+    setDateRangeState({
+      startDate: startDate,
+      endDate: endDate,
+      key: "selection",
+    });
     setDateRange({
       startDate: startDate,
       endDate: endDate,
       key: "selection",
     });
+
+    setFilter(value);
   };
 
   return (
     <div>
-      {isDateRangePickerActive && (
-        <DateRangePicker
-          ranges={[dateRange]}
-          onChange={handleDateChange}
-          showSelectionPreview={true}
-          editableDateInputs={true}
-          onClose={() => setIsDateRangePickerActive(false)}
+      <RadioGroup
+        aria-label="filter"
+        name="filter"
+        value={filter}
+        style={{ color: "white" }}
+        onChange={handleFilterChange}
+        row
+      >
+        <FormControlLabel
+          value="none"
+          control={<Radio style={{ color: "white" }} />}
+          label="All"
         />
+        <FormControlLabel
+          value="week"
+          control={<Radio style={{ color: "white" }} />}
+          label="This Week"
+        />
+        <FormControlLabel
+          value="month"
+          control={<Radio style={{ color: "white" }} />}
+          label="This Month"
+        />
+        <FormControlLabel
+          value="year"
+          control={<Radio style={{ color: "white" }} />}
+          label="This Year"
+        />
+      </RadioGroup>
+      <Button
+        onClick={() => setIsDateRangePickerActive(!isDateRangePickerActive)}
+      >
+        {isDateRangePickerActive ? "Hide Calendar" : "Show Calendar"}
+      </Button>
+      {isDateRangePickerActive && (
+        <div style={{ marginTop: "20px" }}>
+          <DateRangePicker
+            ranges={[dateRange]}
+            onChange={handleDateChange}
+            showSelectionPreview={true}
+            editableDateInputs={true}
+            onClose={() => setIsDateRangePickerActive(false)}
+          />
+        </div>
       )}
-      <div>
-        <button
-          onClick={() => setIsDateRangePickerActive(!isDateRangePickerActive)}
-        >
-          {isDateRangePickerActive ? "Hide calendar" : "Show calendar"}
-        </button>
-        <button onClick={() => handleFilterChange("week")}>This Week</button>
-        <button onClick={() => handleFilterChange("month")}>This Month</button>
-        <button onClick={() => handleFilterChange("year")}>This Year</button>
-      </div>
     </div>
   );
 };

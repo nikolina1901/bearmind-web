@@ -1,7 +1,30 @@
-.playerDetailsPageWrap {
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #050f20;
+  padding: 10px;
+  z-index: 100;
+}
+
+.player-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30px
+}
+
+.player-name {
+  color: #fff;
+}
+.player-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start; 
-    
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    margin: 50px auto;
 }
+
+

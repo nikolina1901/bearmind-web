@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Typography } from "@mui/material";
+import { Chip, Avatar, Typography } from "@mui/material";
 import { formatStrData } from "../../helper";
 
 export const PlayerDetails = ({
@@ -12,12 +12,8 @@ export const PlayerDetails = ({
   detailsWrapper,
 }) => {
   const renderStatus = (status) => {
-    const color = status === "IN RECOVERY" ? "error" : "green";
-    return (
-      <Typography variant="body1" fontWeight="bold" color={color}>
-        {status}
-      </Typography>
-    );
+    const color = status === "IN RECOVERY" ? "error" : "success";
+    return <Chip label={status} color={color} size="small" />;
   };
 
   return (
