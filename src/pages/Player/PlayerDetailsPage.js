@@ -53,6 +53,7 @@ const PlayerDetailsPage = () => {
 
   useEffect(() => {
     filterDataBySessionType(activeSessionType);
+    // eslint-disable-next-line
   }, [dateRange]);
 
   const handleDataFilterByDate = (filteredData) => {
