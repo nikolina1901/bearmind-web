@@ -1,8 +1,12 @@
 import React from "react";
-import { Card, CardContent } from "@mui/material";
-import "./PlayerCard.scss";
+// Component imports
 import LastEvents from "./LastEvents";
 import { PlayerDetails } from "./PlayerDetails";
+// Material-UI imports
+import { Card, CardContent } from "@mui/material";
+// Stylesheet import
+import "./PlayerCard.scss";
+// Custom style imports
 import colors from "../../style/colors";
 
 const PlayerCard = ({
@@ -16,24 +20,24 @@ const PlayerCard = ({
 }) => {
   return (
     <Card
-      className="playerCard"
+      className="player-card"
       sx={{ backgroundColor: colors.whiteOpacity, borderRadius: 4 }}
     >
-      <CardContent className="playerCardContent">
+      <CardContent className="player-card-content">
         <PlayerDetails
           photo={photo}
           name={name}
           position={position}
           number={number}
           status={status}
-          detailsWrapper="playerDetails"
-          contentWrapper="playerCardContent"
+          detailsWrap="player-details"
+          contentWrap="player-card-content"
         />
         <LastEvents
           title={lastEventCreatedAt}
           listTitle="Symptoms reported:"
           list={symptoms}
-          listWrapper="symptomsList"
+          listWrap="symptoms-list"
         />
       </CardContent>
     </Card>

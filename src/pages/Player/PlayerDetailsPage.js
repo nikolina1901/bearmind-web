@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Typography, Tooltip } from "@mui/material";
-import Groups2Icon from "@mui/icons-material/Groups2";
+// Helper function import
 import { mergePlayerAndTeamData } from "../../helper";
-import "./PlayerDetailsPage.scss";
+// JSON data imports
 import playerData from "../../data/player_load.json";
 import teamData from "../../data/team_load.json";
 import players from "../../data/players.json";
+// Component imports
+import ActionBar from "../../components/ActionBar/ActionBar";
 import PlayerCard from "../../components/PlayerCard/PlayerCard";
 import ComposedLineBarChart from "../../components/ComposedLineBarChart/ComposedLineBarChart";
+// Material-UI imports
+import { Typography, Tooltip } from "@mui/material";
+import Groups2Icon from "@mui/icons-material/Groups2";
+// Stylesheet import
+import "./PlayerDetailsPage.scss";
+// Custom style imports
 import colors from "../../style/colors";
 
 const PlayerDetailsPage = () => {
@@ -76,23 +83,26 @@ const PlayerDetailsPage = () => {
 
   return (
     <>
-      <header className="header">
-        <div className="player-info">
-          <Typography
-            variant="h5"
-            color={colors.white}
-            sx={{ fontWeight: "bold" }}
-          >
-            {`${player.firstName} ${player.lastName}`}
-          </Typography>
-          <Tooltip title="Team page" placement="left">
-            <Link to="/" className="go-back-button">
-              <Groups2Icon fontSize="large" style={{ color: colors.white }} />
-            </Link>
-          </Tooltip>
-        </div>
-      </header>
-      <div className="player-wrapper">
+      <ActionBar
+        child={
+          <>
+            <Typography
+              variant="h5"
+              color={colors.white}
+              sx={{ fontWeight: "bold" }}
+            >
+              {`${player.firstName} ${player.lastName}`}
+            </Typography>
+            <Tooltip title="Team page" placement="left">
+              <Link to="/">
+                <Groups2Icon fontSize="large" style={{ color: colors.white }} />
+              </Link>
+            </Tooltip>
+          </>
+        }
+      />
+
+      <div className="player-wrap">
         <PlayerCard
           photo={player.photoPath || ""}
           name={`${player.firstName} ${player.lastName}`}

@@ -1,7 +1,10 @@
 import React from "react";
+// Material-UI imports
 import { Radio, RadioGroup, FormControlLabel } 
 from "@mui/material"; 
+// Custom style imports
 import colors from "../style/colors";
+
 
 const CustomRadioGroup = ({ ariaLabel, name, value, onChange, sx, options }) =>{
   return (

@@ -1,0 +1,19 @@
+@import '../../style/colors.scss';
+
+.action-bar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $action-background;
+  padding:8px;
+  margin-bottom: 100px;
+  z-index: 100;
+}
+
+.action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 50px
+}

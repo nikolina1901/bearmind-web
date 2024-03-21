@@ -1,7 +1,8 @@
 const colors = {
   mainBackground: "#041425",
   white: "#ffffff",
-  whiteOpacity: "#ffffff07",
+  whiteOpacity: "#ffffff10",
+  actionBackground: '#233140',
   lightGray: "#a2a2a2",
   darkGray: "#333333",
   red: "#ff0000",

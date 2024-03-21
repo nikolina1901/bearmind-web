@@ -1,6 +1,9 @@
 import React from "react";
-import { Chip, Avatar, Typography } from "@mui/material";
+// Helper function import
 import { formatStrData } from "../../helper";
+// Material-UI imports
+import { Chip, Avatar, Typography } from "@mui/material";
+// Custom style imports
 import colors from "../../style/colors";
 
 export const PlayerDetails = ({
@@ -9,8 +12,8 @@ export const PlayerDetails = ({
   name,
   position,
   status,
-  contentWrapper,
-  detailsWrapper,
+  contentWrap,
+  detailsWrap,
 }) => {
   const renderStatus = (status) => {
     const color = status === "IN RECOVERY" ? "error" : "success";
@@ -25,7 +28,7 @@ export const PlayerDetails = ({
   };
 
   return (
-    <div className={contentWrapper}>
+    <div className={contentWrap}>
       <Avatar
         src={photo}
         sx={{
@@ -37,7 +40,7 @@ export const PlayerDetails = ({
       >
         {photo ? undefined : number}
       </Avatar>
-      <div className={detailsWrapper}>
+      <div className={detailsWrap}>
         <Typography
           variant="h5"
           color={colors.white}

@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
+// Component imports
+import CustomRadioGroup from "../CustomRadioGroup";
+// DateRangePicker library imports
 import { DateRangePicker } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
+// Material-UI imports
 import { Button } from "@mui/material";
+// Stylesheet import
 import "./CustomDateRangePicker.scss";
-import CustomRadioGroup from "../CustomRadioGroup";
+
 const dateOptions = [
   { value: "none", label: "All" },
   { value: "week", label: "This Week" },

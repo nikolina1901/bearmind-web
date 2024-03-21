@@ -1,4 +1,5 @@
 import React from "react";
+// Component imports
 import SeasonSwitches from "./SeasonSwitches";
 
 const SeasonFiltering = ({ activeSessionType, onDataFilter }) => {

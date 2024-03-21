@@ -1,26 +1,9 @@
 @import '../../style/colors.scss';
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: $main-background;
-  padding: 10px;
-  z-index: 100;
-}
-
-.player-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 30px
-}
-
 .player-name {
   color: $white;
 }
-.player-wrapper {
+.player-wrap {
     display: flex;
     flex-wrap: wrap;
     align-items: center;

@@ -1,6 +1,9 @@
 import React from "react";
+// Material-UI imports
 import { FormControlLabel, FormGroup } from "@mui/material";
+// Component imports
 import CustomSwitch from "../CustomSwitch";
+// Custom style import
 import colors from "../../style/colors";
 
 const SeasonSwitches = ({ switches, activeSessionType, onDataFilter }) => (

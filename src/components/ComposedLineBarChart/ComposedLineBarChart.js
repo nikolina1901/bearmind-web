@@ -1,12 +1,16 @@
 import React from "react";
-import { ComposedChart, Line, Bar, XAxis, Tooltip } from "recharts";
-import { Box } from "@mui/material";
-import "./ComposedLineBarChart.scss";
-import colors from "../../style/colors";
-
+// Component imports
 import CustomDateRangePicker from "../CustomDateRangePicker/CustomDateRangePicker";
 import SeasonFiltering from "../SeasonFiltering/SeasonFiltering";
 import CustomTooltip from "./CustomTooltip";
+import Placeholder from "../Placeholder/Placeholder";
+// Material-UI imports
+import { ComposedChart, Line, Bar, XAxis, Tooltip } from "recharts";
+import { Box } from "@mui/material";
+// Stylesheet import
+import "./ComposedLineBarChart.scss";
+// Custom style imports
+import colors from "../../style/colors";
 
 const ComposedLineBarChart = ({
   handleDataFilterByDate,
@@ -17,7 +21,7 @@ const ComposedLineBarChart = ({
   setDateRange,
 }) => {
   return (
-    <Box className="chart-wrapper" sx={{ background: colors.whiteOpacity }}>
+    <Box className="chart-wrap" sx={{ background: colors.whiteOpacity }}>
       <SeasonFiltering
         activeSessionType={activeSessionType}
         onDataFilter={filterDataBySessionType}
@@ -63,7 +67,7 @@ const ComposedLineBarChart = ({
               />
             </ComposedChart>
           ) : (
-            <img src="../no-data.png" alt="NO DATA" />
+            <Placeholder />
           )}
         </Box>
       </Box>

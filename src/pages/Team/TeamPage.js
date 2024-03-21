@@ -1,10 +1,15 @@
 import React, { useState } from "react";
-import "./TeamPage.scss";
 import { Link } from "react-router-dom";
+// JSON data import
 import players from "../../data/players.json";
+// Component imports
+import ActionBar from "../../components/ActionBar/ActionBar";
 import PlayerCard from "../../components/PlayerCard/PlayerCard";
 import CustomSearchBar from "../../components/CustomSearchBar";
 import CustomRadioGroup from "../../components/CustomRadioGroup";
+import Placeholder from "../../components/Placeholder/Placeholder";
+// Stylesheet import
+import "./TeamPage.scss";
 
 const statusOptions = [
   { value: "none", label: "All" },
@@ -52,26 +57,29 @@ const TeamPage = () => {
 
   return (
     <>
-      <header className="header">
-        <div className="player-info">
-          <CustomSearchBar
-            placeholder="Search by name or jersey number"
-            onChange={handleSearchChange}
-          />
-          <CustomRadioGroup
-            ariaLabel="filter"
-            name="filter"
-            value={filter}
-            options={statusOptions}
-            onChange={handleFilterChange}
-          />
-        </div>
-      </header>
-      <div className="teamPageWrap">
+      <ActionBar
+        child={
+          <>
+            <CustomSearchBar
+              placeholder="Search by name or jersey number"
+              onChange={handleSearchChange}
+            />
+            <CustomRadioGroup
+              ariaLabel="filter"
+              name="filter"
+              value={filter}
+              options={statusOptions}
+              onChange={handleFilterChange}
+            />
+          </>
+        }
+      />
+
+      <div className="team-page-wrap">
         {playersDataSort.length ? (
           <>
             {playersDataSort.map((player) => (
-              <div key={player.id} className="playerCardWrapper">
+              <div key={player.id} className="player-card-wrap">
                 <Link
                   to={`/player/${player.id}`}
                   style={{ textDecoration: "none" }}
@@ -98,7 +106,7 @@ const TeamPage = () => {
             ))}
           </>
         ) : (
-          <img src="../no-data.png" alt="NO DATA" />
+          <Placeholder />
         )}
       </div>
     </>

@@ -1,9 +1,12 @@
 import React from "react";
-import { Card, CardContent, CardHeader, Typography } from "@mui/material";
+// Helper function import
 import { formatStrData } from "../../helper";
+// Material-UI imports
+import { Card, CardContent, CardHeader, Typography } from "@mui/material";
+// Custom style imports
 import colors from "../../style/colors";
 
-const LastEvents = ({ title, listTitle, list, listWrapper }) => {
+const LastEvents = ({ title, listTitle, list, listWrap }) => {
   const renderTypography = (text) => (
     <Typography
       variant="body1"
@@ -41,7 +44,7 @@ const LastEvents = ({ title, listTitle, list, listWrapper }) => {
           sx={{ maxHeight: "50px", overflowY: "auto", pt: 0.5 }}
         >
           {list.map((item, index) => (
-            <ul key={index} className={listWrapper}>
+            <ul key={index} className={listWrap}>
               <li>{formatStrData(item)}</li>
             </ul>
           ))}
