@@ -34,10 +34,12 @@ const CustomDateRangePicker = ({ data, onDataFilter, setDateRange }) => {
 
     filterDataByDateRange();
     setFilter("none");
+    // eslint-disable-next-line
   }, [data]);
 
   useEffect(() => {
     filterDataByDateRange();
+    // eslint-disable-next-line
   }, [dateRange]);
 
   const filterDataByDateRange = () => {
