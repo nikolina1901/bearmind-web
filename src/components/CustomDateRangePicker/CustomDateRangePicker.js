@@ -4,9 +4,8 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { Button } from "@mui/material";
 import "./CustomDateRangePicker.scss";
-import colors from "../../style/colors";
 import CustomRadioGroup from "../CustomRadioGroup";
-const options = [
+const dateOptions = [
   { value: "none", label: "All" },
   { value: "week", label: "This Week" },
   { value: "month", label: "This Month" },
@@ -118,7 +117,7 @@ const CustomDateRangePicker = ({ data, onDataFilter, setDateRange }) => {
         name="filter"
         value={filter}
         onChange={handleFilterChange}
-        options={options}
+        options={dateOptions}
       />
       <Button
         onClick={() => setIsDateRangePickerActive(!isDateRangePickerActive)}
